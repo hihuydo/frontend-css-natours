@@ -14,13 +14,17 @@ Dark green: #28b485
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px; /* 1rem = 10px */
+}
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
 }
 
 .header {
@@ -39,12 +43,12 @@ body {
 
 .logo-box {
     position: absolute; /* Position relative to the nearest positioned ancestor (header) */
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 3.5rem; /* 1 rem = 16px, so 3.5rem = 56px */
+    height: 3.5rem; 
 }
 
 .text-box {
@@ -58,16 +62,16 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 60px; /* Space below the heading, create space between text and button */
+    margin-bottom: 6rem; /* Space below the heading, create space between text and button */
 
     backface-visibility: hidden; /* Improve performance during animation */
 }
 
 .heading-primary--main {
     display: block; /* Make it a block element to stack the subheading below */
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft; /* Name of the animation */
     animation-duration: 1s; /* Duration of the animation */
@@ -79,9 +83,9 @@ body {
 
 .heading-primary--sub {
     display: block; /* Make it a block element */
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.5px;
+    letter-spacing: 1.75rem;
 
     animation-name: moveInRight; /* Name of the animation */
     animation-duration: 1s; /* Duration of the animation */
@@ -93,10 +97,10 @@ body {
 @keyframes moveInLeft { 
     0% { /* Starting state */
         opacity: 0;
-        transform: translateX(-100px); /* Start 100px to the left */
+        transform: translateX(-10rem); /* Start 100px to the left */
     }
     80% { /* Intermediate state */
-        transform: translateX(10px); /* Move slightly past the final position */
+        transform: translateX(1rem); /* Move slightly past the final position */
     }
     100% { /* Final state */
         opacity: 1;
@@ -107,10 +111,10 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     100% { 
         opacity: 1;
@@ -121,7 +125,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(10rem);
     }
     100% { 
         opacity: 1;
@@ -133,9 +137,9 @@ body {
 .btn:visited { /* Style for unvisited and visited links with class "btn" */
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block; /* Make it behave like a block element but stay inline, do it when we give padding or height to a element */
-    border-radius: 100px;
+    border-radius: 10rem;
     position: relative; /* For positioning the pseudo-element absolutely within the button */
     
     transition: all .2s; /* Smooth transition (transform) for all properties over 0.2 seconds */
@@ -143,12 +147,12 @@ body {
 
 .btn:hover {
     transform: translateY(-3px); /* Move the button up by 3px on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow (x, y, blur, color) on hover */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2); /* Add shadow (x, y, blur, color) on hover */
 }
 
 .btn:active {
     transform: translateY(-1px); /* Move the button up by 1px when active (clicked) */
-    ox-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reduce shadow when active */
+    ox-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); /* Reduce shadow when active */
 }
 
 .btn-white {
@@ -162,7 +166,7 @@ body {
     display: inline-block; /* Make it behave like an inline element (like the btn link and visited but allow width and height */
     height: 100%; /* Full height of the button */
     width: 100%; /* Full width of the button */
-    border-radius: 100px; /* Match the button's border radius */
+    border-radius: 10rem; /* Match the button's border radius */
 
     position: absolute; /* Position relative to the nearest positioned ancestor (the button) */
     top: 0;
