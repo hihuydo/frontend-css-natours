@@ -114,14 +114,31 @@ body {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
     /* Add shadow (x, y, blur, color) on hover */ }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
   /* Style for unvisited and visited links with class "btn" */
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -186,6 +203,66 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  /* to be able to add padding and height */
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 3px;
+  transition: all .2s;
+  /* Smooth transition (transform) for all properties over 0.2 seconds */ }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  /* Add shadow (x, y, blur, color) on hover */
+  transform: translateY(-2px);
+  /* Move the button up by 2px on hover */ }
+
+.btn-text:active {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  /* Add shadow (x, y, blur, color) on hover */
+  transform: translateY(0);
+  /* Move the button down to its original position when active (clicked) */ }
+
+.composition {
+  position: relative;
+  /* to be able to position the photos absolutely within the composition */ }
+  .composition__photo {
+    width: 55%;
+    /* for responsive design */
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    /* to be able to position the photos absolutely within the composition */
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem;
+    /* add space between the photo and the outline */ }
+    .composition__photo--p1 {
+      /* Photo 1 */
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      /* Photo 2 */
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      /* Photo 3 */
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20;
+      /* bring the photo to the front */
+      outline: 15px solid #55c57a; }
+  .composition:hover .composition__photo:not(:hover) {
+    /* when the photo is not hovered, scale it down */
+    transform: scale(0.95); }
 
 .header {
   height: 95vh;
