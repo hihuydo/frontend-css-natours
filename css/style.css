@@ -73,8 +73,7 @@ body {
     /* Name of the animation */
     animation-duration: 1s;
     /* Duration of the animation */
-    animation-delay: 0.5s;
-    /* Delay before the animation starts */
+    /*animation-delay: 0.5s; Delay before the animation starts */
     animation-iteration-count: 1;
     /* Number of times the animation will repeat */
     animation-timing-function: ease-in-out;
@@ -89,8 +88,7 @@ body {
     /* Name of the animation */
     animation-duration: 1s;
     /* Duration of the animation */
-    animation-delay: 0.5s;
-    /* Delay before the animation starts */
+    /* animation-delay: 0.5s;  Delay before the animation starts */
     animation-iteration-count: 1;
     /* Number of times the animation will repeat */
     animation-timing-function: ease-in-out;
@@ -148,7 +146,7 @@ body {
 .btn--animated {
   animation-name: moveInBottom;
   /* Name of the animation */
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   /* Duration of the animation */
   animation-iteration-count: 1;
   /* Number of times the animation will repeat */

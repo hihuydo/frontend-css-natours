@@ -22,7 +22,7 @@ body {
     
         animation-name: moveInLeft; /* Name of the animation */
         animation-duration: 1s; /* Duration of the animation */
-        animation-delay: 0.5s; /* Delay before the animation starts */
+        /*animation-delay: 0.5s; Delay before the animation starts */
         animation-iteration-count: 1; /* Number of times the animation will repeat */
         animation-timing-function: ease-in-out; /* Easing function for smoothness */
     }
@@ -35,7 +35,7 @@ body {
 
         animation-name: moveInRight; /* Name of the animation */
         animation-duration: 1s; /* Duration of the animation */
-        animation-delay: 0.5s; /* Delay before the animation starts */
+        /* animation-delay: 0.5s;  Delay before the animation starts */
         animation-iteration-count: 1; /* Number of times the animation will repeat */
         animation-timing-function: ease-in-out; /* Easing function for smoothness */
     }
