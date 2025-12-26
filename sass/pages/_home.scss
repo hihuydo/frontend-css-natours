@@ -4,3 +4,20 @@
     margin-top: -20vh; /* Push the section up to cover the header */
 }
 
+.section-features{
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)), 
+        url(../img/hero.jpg);
+    background-size: cover;
+    /* clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%); */
+
+    transform: skewY(-7deg); /* Skew the section down by 7 degrees */
+    margin-top: -10rem;  /* Push the section up by 10rem */
+
+    & > * { /* Select all child elements of the section-features */
+        transform: skewY(7deg); /* Skew the child elements up by 7 degrees */
+    }
+}
