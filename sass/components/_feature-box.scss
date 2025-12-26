@@ -13,6 +13,7 @@
         display: inline-block; /* Make the width fit the width of the text */
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text; /* Clip the background to the text */
+        background-clip: text; /* Standard property for compatibility */
         color: transparent; /* Make the text transparent */
     }
 
