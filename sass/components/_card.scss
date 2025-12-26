@@ -1,0 +1,43 @@
+.card {
+    perspective: 150rem; /* Perspective is the distance between the camera and the card */
+    -moz-perspective: 150rem; /* For Firefox */
+    position: relative;
+    height: 50rem; /* Set the height of the card, the card parent lost its height because of position absolute on the children */
+
+    &__side {
+        background-color: $color-white;
+        height: 50rem;
+        transition: all .8s;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden; /* Hide the back face of the card */
+
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+            z-index: 1;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 { /* Back side of the card 1 */
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front { /* Select the side of the card that is the front and apply the transform to the back side */
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back { 
+        transform: rotateY(0deg);
+        z-index: 10;
+    }
+}
