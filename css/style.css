@@ -410,6 +410,40 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  /* Center the story block element */
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewY(-7deg);
+  /* Skew the story block element down by 7 degrees */ }
+  .story > * {
+    /* Select all child elements of the story block element */
+    transform: skewY(7deg);
+    /* Skew the child elements up by 7 degrees */ }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    /* create a circle with a radius of 50% at the center of the shape */
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    /* For Safari and Chrome */
+    shape-outside: circle(50% at 50% 50%);
+    /* shape-outside is a CSS property that allows you to define the shape of the content that should be flowed around the float */
+    transform: translateX(-3rem) skewY(7deg);
+    /* move the shape to the left by 3rem and skew it to the right by 12 degrees */ }
+  .story__img {
+    height: 100%;
+    /* make the image take up the full height of the shape */ }
+  .story__text {
+    transform: skewY(7deg); }
+
 .header {
   height: 95vh;
   /* 95% of the viewport height */
@@ -496,3 +530,7 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
