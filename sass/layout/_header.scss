@@ -28,5 +28,6 @@
         left: 50%;
         transform: translate(-50%, -50%); /* Center the box */
         text-align: center; /* Center the button inside the box, cause the button is inline-block */
+        // Note: Using top: 40% instead of 50% for vertical positioning, so absCenter mixin not used here
     }
 }
