@@ -43,10 +43,8 @@
     }
 
     &__caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 20%);
+        @include absCenter;
+        transform: translate(-50%, 20%); /* Override absCenter transform for initial offset position */
         color: $color-white;
         text-transform: uppercase;
         text-align: center;
@@ -59,6 +57,6 @@
 
     &:hover &__caption {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); /* Perfect center on hover */
     }
 }
