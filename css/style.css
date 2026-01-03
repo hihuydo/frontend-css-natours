@@ -12,6 +12,8 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
+
 1em = 16px
 */
 /* Browser reset */
@@ -35,10 +37,10 @@ html {
   /* max-width is used for tab-port because we want to apply the styles for tablet and below */
   /* max-width is used for phone because we want to apply the styles for phone and below */
   /* min-width is used for big-desktop because we want to apply the styles for desktop and above */ }
-  @media (max-width: 93.75em) {
+  @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 75em) {
+  @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
   @media (max-width: 37.5em) {
