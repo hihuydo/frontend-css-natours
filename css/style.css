@@ -51,7 +51,13 @@ html {
       font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem;
+  /* Add padding to the body to avoid the content being too close to the edges */
+  /* max-width is used for tab-port because we want to apply the styles for tablet and below */ }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -92,8 +98,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -116,7 +121,11 @@ body {
     animation-iteration-count: 1;
     /* Number of times the animation will repeat */
     animation-timing-function: ease-in-out;
-    /* Easing function for smoothness */ }
+    /* Easing function for smoothness */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem; } }
   .heading-primary--sub {
     display: block;
     /* Make it a block element */
@@ -131,7 +140,11 @@ body {
     animation-iteration-count: 1;
     /* Number of times the animation will repeat */
     animation-timing-function: ease-in-out;
-    /* Easing function for smoothness */ }
+    /* Easing function for smoothness */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -146,7 +159,15 @@ body {
   /* Make the text transparent */
   letter-spacing: 2px;
   transition: all .4s;
-  /* Smooth transition for all properties over 0.4 seconds */ }
+  /* Smooth transition for all properties over 0.4 seconds */
+  /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+  /* max-width is used for phone because we want to apply the styles for phone and below */ }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     /* Skew the text to the right and left */
