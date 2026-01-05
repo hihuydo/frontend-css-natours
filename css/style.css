@@ -787,20 +787,74 @@ body {
     transform: translate(-50%, -50%) scale(0);
     /* Because of mixin absCenter */
     transition: all 0.4s 0.2s;
-    /* 0.4s delay for the transition, 0.2s delay for the animation */ }
+    /* 0.4s delay for the transition, 0.2s delay for the animation */
+    /* min-width is used for big-desktop because we want to apply the styles for desktop and above */
+    /* max-width is used for tab-land because we want to apply the styles for tablet landscape and below */
+    /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (min-width: 112.5em) {
+      .popup__content {
+        width: 70%; } }
+    @media (max-width: 75em) {
+      .popup__content {
+        width: 85%; } }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        width: 90%;
+        display: block; } }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        width: 95%;
+        display: block;
+        max-height: 90vh;
+        overflow-y: auto; } }
   .popup__left {
     width: 33.333333%;
-    display: table-cell; }
+    display: table-cell;
+    /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 56.25em) {
+      .popup__left {
+        width: 100%;
+        display: block; } }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        width: 100%;
+        display: block; } }
   .popup__right {
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
-    padding: 3rem 5rem; }
+    padding: 3rem 5rem;
+    /* max-width is used for tab-land because we want to apply the styles for tablet landscape and below */
+    /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 75em) {
+      .popup__right {
+        padding: 3rem 4rem; } }
+    @media (max-width: 56.25em) {
+      .popup__right {
+        width: 100%;
+        display: block;
+        padding: 3rem 4rem; } }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        width: 100%;
+        display: block;
+        padding: 2rem 2.5rem; } }
   .popup__img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        height: 25rem; } }
+    @media (max-width: 37.5em) {
+      .popup__img {
+        height: 20rem; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -814,7 +868,28 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-    /* Silbentrennung für lange Wörter, HTML language attribute should be set to the language of the text */ }
+    /* Silbentrennung für lange Wörter, HTML language attribute should be set to the language of the text */
+    /* max-width is used for tab-land because we want to apply the styles for tablet landscape and below */
+    /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 75em) {
+      .popup__text {
+        column-gap: 3rem;
+        -moz-column-gap: 3rem; } }
+    @media (max-width: 56.25em) {
+      .popup__text {
+        column-count: 1;
+        -moz-column-count: 1;
+        column-gap: 0;
+        -moz-column-gap: 0;
+        column-rule: none;
+        -moz-column-rule: none; } }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        column-count: 1;
+        -moz-column-count: 1; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -832,7 +907,19 @@ body {
     display: inline-block;
     transition: all 0.2s;
     line-height: 1;
-    /* Adjust the position of the X since it's a text element */ }
+    /* Adjust the position of the X since it's a text element */
+    /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+    /* max-width is used for phone because we want to apply the styles for phone and below */ }
+    @media (max-width: 56.25em) {
+      .popup__close:link, .popup__close:visited {
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 2.5rem; } }
+    @media (max-width: 37.5em) {
+      .popup__close:link, .popup__close:visited {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem; } }
   .popup__close:hover {
     color: #55c57a; }
 
