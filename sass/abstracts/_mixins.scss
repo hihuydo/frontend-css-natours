@@ -22,10 +22,12 @@
 1800px +: Big desktop
 
 $breakpoint argument choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
+- phone (0 - 600px)
+- tab-port (600 - 900px)
+- tab-land (900 - 1200px)
+- big-desktop (1200px +)
+
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
 
 1em = 16px
 */
@@ -35,10 +37,10 @@ $breakpoint argument choices:
         @media (max-width: 37.5em) { @content; } /* max-width is used for phone because we want to apply the styles for phone and below */
     }
     @if $breakpoint == tab-port {
-        @media (max-width: 75em) { @content; } /* max-width is used for tab-port because we want to apply the styles for tablet and below */
+        @media (max-width: 56.25em) { @content; } /* max-width is used for tab-port because we want to apply the styles for tablet and below */
     }
     @if $breakpoint == tab-land {
-        @media (max-width: 93.75em) { @content; } /* max-width is used for tab-land because we want to apply the styles for tablet landscape and below */
+        @media (max-width: 75em) { @content; } /* max-width is used for tab-land because we want to apply the styles for tablet landscape and below */
     }
     @if $breakpoint == big-desktop {
         @media (min-width: 112.5em) { @content; } /* min-width is used for big-desktop because we want to apply the styles for desktop and above */
